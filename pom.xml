@@ -34,7 +34,8 @@
     <rest-assured.version>3.1.0</rest-assured.version>
     <spring-boot.version>1.5.14.RELEASE</spring-boot.version>
     <spring-boot-bom.version>1.5.14.Final</spring-boot-bom.version>
-    <fabric8.generator.from>registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift:${openjdk18-openshift.version}</fabric8.generator.from>
+    <fuse.bom.version>7.7.0.fuse-770012-redhat-00003</fuse.bom.version>
+    <fabric8.generator.from>openshift/redhat-openjdk18-openshift:${openjdk18-openshift.version}</fabric8.generator.from>
   </properties>
   <licenses>
     <license>
@@ -219,8 +220,9 @@
       <build>
         <plugins>
           <plugin>
-            <groupId>io.fabric8</groupId>
+            <groupId>org.jboss.redhat-fuse</groupId>
             <artifactId>fabric8-maven-plugin</artifactId>
+            <version>${fuse.bom.version}</version>            
             <executions>
               <execution>
                 <id>fmp</id>
@@ -262,4 +264,3 @@
     </profile>
   </profiles>
 </project>
-
