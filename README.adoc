@@ -99,7 +99,7 @@ curl -H "Content-Type: application/json" -X PUT -d '{"name":"pineapple"}'  http:
 .Delete an Entry:
 [source,bash,options="nowrap",subs="attributes+"]
 ----
-curl -X DELETE http://MY_APP/api/fruits/1
+curl -X DELETE http://$MY_APP/api/fruits/1
 ----
 
 NOTE: If you receive an HTTP Error code `503` as a response after executing these commands, it means that the application is not ready yet.
